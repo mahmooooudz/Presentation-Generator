@@ -1,69 +1,69 @@
-# 🎯 Slide it In
+# Slide it In - AI Presentation Generator Demo
 
-**Transform any document into stunning presentations with AI in seconds.**
+A simplified demo version of the AI presentation generator that transforms documents into beautiful presentations using Google's Gemini AI.
 
-[![Live Demo](https://img.shields.io/badge/🚀_Try_Now-justslideitin.com-blue?style=for-the-badge)](https://justslideitin.com/)
-[![Case Study](https://img.shields.io/badge/📖_Case_Study-Read_More-green?style=for-the-badge)](https://martinsit.ca/writing/shipping-presentation-generation-3-days)
+## Features
 
----
+- 📄 Upload PDF, TXT, or Markdown files
+- ✍️ Or paste text content directly
+- 🎨 Choose from multiple themes
+- 🤖 AI-powered content transformation using Gemini
+- 📥 Download generated presentations as Markdown
+- 💻 Fully responsive design
 
-## ⚡ What It Does
+## Quick Start
 
-Upload your **PDF, Markdown, or TXT** → Get a **professional slide deck** in seconds. Powered by Google Gemini AI.
+1. **Clone and install:**
+   ```bash
+   npm install
+   ```
 
-## 🔥 Key Features
+2. **Set up environment:**
+   ```bash
+   cp .env.example .env.local
+   ```
+   
+   Get your Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey) and add it to `.env.local`:
+   ```
+   GEMINI_API_KEY=your_api_key_here
+   ```
 
-| Feature | Description |
-|---------|-------------|
-| 🤖 **AI-Powered** | Gemini 1.5 Flash analyzes and creates compelling content |
-| 🎨 **6 Visual Themes** | Default, Beam, Rose Pine, Gaia, Uncover, Graph Paper |
-| 🎯 **Smart Targeting** | Tailored for General, Academic, Technical, Professional, Executive audiences |
-| ⚙️ **Detail Control** | Choose Minimal, Medium, or Detailed content extraction |
-| 📱 **Responsive** | Works perfectly on all devices |
-| 📤 **PDF Export** | Download ready-to-use presentations |
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## 🚀 Quick Start
+4. **Open [http://localhost:3000](http://localhost:3000)**
 
-```bash
-1. Visit justslideitin.com
-2. Upload your document
-3. Pick a theme & settings
-4. Download your presentation
-```
+## How It Works
 
-## 🛠️ Tech Stack
+1. **Upload Content**: Upload a document or paste text
+2. **Choose Theme**: Select a presentation theme
+3. **Generate**: AI processes your content and creates slides
+4. **Download**: Get your presentation as Markdown
 
-**Frontend:** Next.js 14, TypeScript, Tailwind CSS, Framer Motion  
-**Backend:** Go (Gin), Google Cloud Firestore, Cloud Tasks  
-**AI Service:** Google Gemini API, Marp for slide generation
+## Tech Stack
 
-## 📁 Project Structure
+- **Frontend**: Next.js 14, React, TypeScript
+- **Styling**: Tailwind CSS, Framer Motion
+- **AI**: Google Gemini API
+- **File Processing**: PDF parsing, text extraction
 
-```
-slideitin/
-├── frontend/           # Next.js app
-├── backend/           
-│   ├── api/           # Main API service
-│   └── slides-service/ # AI slide generation
-└── cloudbuild.yaml    # GCP deployment config
-```
+## Deployment
 
-## ☁️ Deployment
+Deploy easily on Vercel:
 
-This app runs exclusively on **Google Cloud Platform**:
-- Cloud Run services
-- Cloud Tasks for async processing  
-- Firestore for data storage
-- Built and deployed via `cloudbuild.yaml`
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/slide-it-in-demo)
 
-## 📄 License
+Don't forget to add your `GEMINI_API_KEY` environment variable in your deployment settings.
+
+## Converting to PowerPoint
+
+The generated Markdown can be converted to PowerPoint using:
+- [Marp](https://marp.app/) - For direct PDF/HTML export
+- [Pandoc](https://pandoc.org/) - For PowerPoint conversion
+- Online converters like [Markdown to PPT](https://www.markdowntoppt.com/)
+
+## License
 
 MIT License - feel free to use and modify!
-
-## 👨‍💻 Author
-
-**Mahmoud Emad** ([@mahmooooudz](https://github.com/mahmooooudz))
-
----
-
-*Built with ❤️ using Google Cloud Platform*
